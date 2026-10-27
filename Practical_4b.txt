@@ -1,0 +1,58 @@
+PRACTICAL 4B
+
+                                        Practical No.4
+Aim: Practical 4b - Pass data between components using props.
+
+
+b) Pass the data between components using Props.
+In src/App.jsx
+
+
+import React from "react";
+
+import Employee from "./Employee";
+
+function App(){
+
+    return(
+
+     <div>
+
+         <Employee name="Vaishnavi" department="IT" salary={50000}/>
+
+     </div>
+
+    );
+
+}
+
+export default App;
+
+
+In src/Employee.jsx
+
+
+function Employee(props){
+
+     return(
+
+          <div>
+
+            <h2>Employee Details</h2>
+
+            <p>Name:{props.name}</p>
+
+            <p>Department:{props.department}</p>
+
+            <p>Salary:{props.salary}</p>
+
+          </div>
+
+     );
+
+
+
+}
+
+export default Employee;
+Output:-

@@ -1,0 +1,122 @@
+PRACTICAL 4F
+
+                                        Practical No.4
+Aim: Practical 4f - Build a small interactive component, such as a counter or to-do list.
+
+
+f) Build a small interactive component (Eg., Counter or ToDo list).
+In src/App.jsx
+
+import { useState } from "react";
+function App() {
+  const [task, setTask] = useState("");
+  const [tasks, setTasks] = useState([]);
+  const addTask = () => {
+       if (task.trim() === "") {
+             alert("Please enter a task");
+             return;
+       }
+       setTasks([
+             ...tasks,
+             {
+                 id: Date.now(),
+                 name: task,
+                 completed: false
+             }
+       ]);
+       setTask("");
+  };
+  const deleteTask = (id) => {
+       setTasks(tasks.filter((item) => item.id !== id));
+  };
+  const completeTask = (id) => {
+       setTasks(
+             tasks.map((item) =>
+                 item.id === id
+                   ? { ...item, completed: !item.completed }
+                   : item
+             )
+
+
+
+       );
+  };
+  return (
+       <div>
+            <h2>My To-Do List</h2>
+            <input
+                 type="text"
+                 placeholder="Enter a task"
+                 value={task}
+                 onChange={(e) => setTask(e.target.value)}
+            />
+            <button onClick={addTask}>Add Task</button>
+            <h3>Tasks</h3>
+            {tasks.length === 0 ? (
+                 <p>No task added yet</p>
+            ):(
+                 <ul>
+                   {tasks.map((item) => (
+                        <li key={item.id}>
+                          <span
+                              onClick={() => completeTask(item.id)}
+                              style={{
+                                   textDecoration: item.completed
+                                     ? "line-through"
+                                     : "none",
+                                   cursor: "pointer"
+                              }}
+                          >
+                              {item.name}
+                          </span>
+                          <button
+
+
+
+                            onClick={() => deleteTask(item.id)}
+                        >
+                            Delete
+                        </button>
+                    </li>
+                  ))}
+                </ul>
+           )}
+         </div>
+    );
+}
+export default App;
+
+
+Output:-
+
+
+
+Important Methods / Functions
+
+1. `function App()`
+Used to create a reusable Functional Component in React.
+
+2. `return()`
+Used to return JSX, which is the HTML-like code to be displayed on screen.
+
+3. `useState()`
+Used to create and manage state in a functional component. It returns a value and a function
+to update it.
+
+4. `props`
+Used to pass data from parent component to child component.
+
+5. `setCount()` / `setName()`
+Used to update the state value and re-render the component with new data.
+
+6. `onClick={ }`
+Used to handle click events on buttons and other elements in React.
+
+7. `onChange={ }`
+Used to handle input field changes and accept user input dynamically.
+
+8. `map()`
+Used to display a list of items stored in state or array by iterating over them.
+
+9. `export default`
+Used to export a component so it can be imported and used in other files.

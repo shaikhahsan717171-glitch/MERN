@@ -1,0 +1,25 @@
+PRACTICAL 6F
+
+                                           Practical – 6
+Aim: Practical 6f - Create a simple JSON API using Express.
+
+f. Create a Simple JSON API using Express
+in server.js
+
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+const students = [
+     { id: 1, name: "Amit", course: "B.Sc. IT", semester: 5 },
+
+     { id: 2, name: "Priya", course: "B.Sc. IT", semester: 5 },
+     { id: 3, name: "Neha", course: "B.Sc. IT", semester: 5 }
+];
+app.get("/api/students", (req, res) => {
+      res.json(students);
+});
+app.listen(PORT, () => {
+console.log(`Server running on port ${PORT}`);
+});
+Output: http://localhost:3000/api/students

@@ -1,0 +1,32 @@
+PRACTICAL 1D
+
+                                         Practical No.1
+Aim: Practical 1d - Create and run a simple program using variables and functions.
+
+
+d) Create and run a simple program using variables and functions.
+1. Add JavaScript code.
+
+let name="Vaishnavi";
+
+let age=19;
+
+
+function display(PersonName, PersonAge)
+
+{
+
+    console.log("Hello "+PersonName+"!");
+
+    console.log("You are "+ PersonAge + " Years old");
+
+}
+
+display(name,age);
+
+2. Open the terminal.
+3. Run the program using:
+       Node.js
+
+
+4. Output:-

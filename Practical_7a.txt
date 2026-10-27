@@ -1,0 +1,39 @@
+PRACTICAL 7A
+
+                                            Practical-7
+Aim: Practical 7a - Download and install MongoDB Community Server and open MongoDB Compass.
+MongoDB is a NoSQL, document-oriented database used in MERN Stack.
+
+Unlike SQL databases where data is stored in tables and rows, MongoDB stores data in collections and
+documents
+
+
+a. Download MongoDB Community Server
+https://www.mongodb.com/try/download/community
+
+
+Choose Complete installation Install MongoDB Compass
+
+Finish
+
+Open MongoDB Compass Launch MongoDB Compass.
+
+The default connection string appears as:
+
+mongodb://localhost:27017
+
+Click save & connect
+
+
+
+Create a Database
+Click Create Database
+Enter:
+
+Database Name = studentDB
+Collection Name = students
+Click Create Database
+
+
+
+Creating the studentDB Database

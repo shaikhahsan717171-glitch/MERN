@@ -1,0 +1,30 @@
+PRACTICAL 1B
+
+                                         Practical No.1
+Aim: Practical 1b - Create a simple Node.js file and run it using the terminal.
+
+
+b) Create a simple Node.js file and run it using terminal.
+1. Create a folder named MERN_Practicals.
+
+2. Open the folder in VS Code.
+
+3. Create a file named app.js.
+
+4. Add JavaScript code.
+
+       console.log(“Welcome to Node.js”);
+
+console.log() – Used to print output on the terminal.
+
+Node filename.js – Used to execute a JavaScript file.
+
+Key Point: Every Node.js file should have a .js extension.
+
+5. Open the terminal.
+
+6. Run the Program using:
+
+       Node.js
+
+7. Output.

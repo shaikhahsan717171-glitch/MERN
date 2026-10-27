@@ -1,0 +1,32 @@
+PRACTICAL 7C
+
+                                            Practical-7
+Aim: Practical 7c - Connect Node.js with MongoDB using Mongoose.
+MongoDB is a NoSQL, document-oriented database used in MERN Stack.
+
+Unlike SQL databases where data is stored in tables and rows, MongoDB stores data in collections and
+documents
+
+
+c. Connect Node.js with MongoDB using Mongoose.
+Create a folder named MONGO
+Open the integrated terminal
+Bash
+> Cd MONGO
+>npm init –y
+>npm install mongoose
+
+
+
+Create a file inside MONGO folder named server.js
+const mongoose = require("mongoose");
+mongoose
+ .connect("mongodb://127.0.0.1:27017/studentDB")
+ .then(() => {
+  console.log("MongoDB Connected Successfully");
+ })
+ .catch((error) => {
+  console.log(error);
+ });
+Run:
+Node server.js

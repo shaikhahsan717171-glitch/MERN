@@ -1,0 +1,92 @@
+PRACTICAL 3F
+
+                                        Practical No.3
+Aim: Practical 3f - Create a React component that displays the current date and time dynamically using JavaScript.
+
+
+f) Create a React component that display current Date and Time Dynamically
+using JavaScript.
+1. Create Page Components
+
+Inside the Src folder, create a folder
+
+Inside it, create:
+
+DateTime.jsx
+
+In src/ DateTime.jsx
+
+import React, {useState, useEffect} from "react";
+function Datetime(){
+const [datetime, setDatetime] = useState(new Date());
+useEffect(() => {
+     const timer = setInterval(() => {
+       setDatetime(new Date());
+     }, 1000);
+     return () => clearInterval(timer);
+}, []);
+return (
+     <div style={{ textAlign: "center", marginTop: "20px" }}>
+       <h2>Current Date and Time</h2>
+       <h3>Date:{datetime.toLocaleDateString()}</h3>
+       <h3>Time: {datetime.toLocaleTimeString()}</h3>
+     </div>
+);
+}
+export default Datetime;
+
+
+In src/ App.jsx
+
+
+
+import React from "react";
+import Datetime from "./DateTime";
+function App(){
+    return(
+     <div>
+         <Datetime/>
+     </div>
+    );
+}
+export default App;
+
+
+Output:-
+
+
+
+Important Methods / Functions.
+
+1. function App( )
+Used to Create a reusable Functional Component in React.
+
+2. return( )
+Used to return JSX, which is the HTML-like code to be displayed on screen.
+
+3. export default
+Used to export a component so it can be imported and used in other files.
+
+4. JSX Expression { }
+Used to embed and display JavaScript variables and expressions inside JSX.
+
+5. import
+Used to import CSS files and other components into the current file.
+
+6. style = { { } }
+Used to apply inline CSS styling to JSX elements in React.
+
+7. className
+Used to apply CSS classes from an external CSS file, instead of using ‘class’.
+
+8. function call – calculateSum( )
+Used to create a reusable block of code and call it inside JSX to get a result.
+
+9. new Date ( )
+Used to create an object that contains the current date and time.
+
+10. toLocaleDateString( )
+Used to display the current date in a readable string format.
+
+11. toLocaleTimeString( )
+Used to display the current time in a readable string format.

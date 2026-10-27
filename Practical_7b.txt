@@ -1,0 +1,29 @@
+PRACTICAL 7B
+
+                                            Practical-7
+Aim: Practical 7b - Perform CRUD operations using MongoDB Compass.
+MongoDB is a NoSQL, document-oriented database used in MERN Stack.
+
+Unlike SQL databases where data is stored in tables and rows, MongoDB stores data in collections and
+documents
+
+
+b. Perform CRUD operations using MongoDB Compass.
+Program / Operations
+Insert the following document into the students collection.
+{
+"studentId": 101,
+"name": "Rahul Sharma",
+"course": "M.Sc. Information Technology",
+"semester": 3,
+"city": "Delhi"
+}
+Perform the following operations:
+Insert a document
+View documents
+Update the city field
+Delete the document
+
+
+
+Output:
